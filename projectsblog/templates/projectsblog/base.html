@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIBLOG</title>
+</head>
+<style>
+    .header{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 40px;
+        letter-spacing: 1px;
+    }
+    .header .nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .header .nav ul li{
+        list-style: none;
+        margin: 10px;
+    }
+    .header .nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    .header .nav ul li a:active,
+    .header .nav ul li a:hover{
+        color: rgb(179, 13, 55);
+    }
+</style>
+<body>
+    <section class="header">
+        <div class="logo">
+            <img src="" alt="">
+            <h1><span>T</span>ri<span>B</span>log</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="{% url 'allprojects' %}">All Projects</a></li>
+                <li><a href="{% url 'addproject' %}">Add project</a></li>
+            </ul>
+        </div>
+    </section>
+    {% block content %}
+
+    {% endblock %}
+
+    <section class="footer">
+        <div class="address">
+
+        </div>
+        <div class="contact">
+
+        </div>
+        <div class="social-links">
+
+        </div>
+    </section>
+</body>
+</html>

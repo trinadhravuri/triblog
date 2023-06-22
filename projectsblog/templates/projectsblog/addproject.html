@@ -1,0 +1,29 @@
+{% extends 'projectsblog/base.html' %}
+
+
+{% block content %}
+<style>
+.addproject{
+    position: relative;
+    top: 100px;
+}
+</style>
+<section class="addproject">
+    <div>
+
+    </div>
+    <div class="form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <label for="">{{field.label}}</label>
+            <div>
+                {{field}}
+            </div>
+            {% endfor %}
+            <button type="submit">Add</button>
+        </form>
+        
+    </div>
+</section>
+{% endblock %}

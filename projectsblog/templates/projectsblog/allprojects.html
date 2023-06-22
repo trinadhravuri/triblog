@@ -1,0 +1,52 @@
+{% extends 'projectsblog/base.html'%}
+
+{% block content %}
+<style>
+.allprojects{
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    letter-spacing: 1px;
+    top: 80px;
+    font-size: 30px;
+    line-height: 50px;
+}
+.allprojects ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.allprojects ul li{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    margin: 50px;
+    list-style: none;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+
+}
+.allprojects ul li:hover{
+    box-shadow: 0 0 16px 6px rgba(0,0,0,0.3);
+}
+.allprojects ul li a{
+    text-decoration:underline;
+    color: black;
+}
+.allprojects ul li a:hover{
+    color:  rgb(179, 13, 55);
+}
+</style>
+<section class="allprojects">
+    <div class="title">All Projects</div>
+<ul>
+{% for project in projects %}
+<li>
+<a href="">{{project.title}}</a>
+<a href="">{{project.demo_link}}</a>
+</li>
+{% endfor %}
+</ul>
+</section>
+{% endblock %}
